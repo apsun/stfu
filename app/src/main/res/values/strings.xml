@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">STFU</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="phone_permissions_required">
+        STFU requires phone permissions to screen calls
+    </string>
+    <string name="screening_role_required">
+        STFU needs to be set as the screening app to screen calls
+    </string>
+    <string name="no_filter_rules">No filter rules!</string>
+    <string name="add_new_filter_rule">Add new filter rule</string>
+    <string name="add_by_us_area">Add by US area</string>
+    <string name="area_data_attribution_fmt">
+        Data source: %1$s\nLast updated: %2$s
+    </string>
+    <string name="manual_entry">Manual entry</string>
+    <string name="manual_entry_prompt">
+        Enter the number prefix you want to block in E.164 format. For example,
+        if you live in North America (+1 country code) and want to block all
+        callers from area code 555, enter +1555.
+    </string>
+    <string name="added_rule_fmt">Added rule: %1$s</string>
+    <string name="added_rules_fmt">Added %1$d new rule(s)</string>
+    <string name="deleted_rule_fmt">Deleted rule: %1$s</string>
+</resources>

@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.10'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.9'
+}
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        versionCode 1
+        versionName '1.0.0'
+        minSdkVersion 29
+        targetSdkVersion 30
+        buildConfigField('String', 'LOG_TAG', '"STFU"')
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField('int', 'LOG_LEVEL', '2')
+        }
+
+        release {
+            postprocessing {
+                removeUnusedCode true
+                removeUnusedResources true
+                obfuscate false
+                optimizeCode true
+            }
+            buildConfigField('int', 'LOG_LEVEL', '4')
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
