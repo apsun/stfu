@@ -11,7 +11,8 @@ class AreaCodeArrayAdapter(context: Context, entries: List<AreaCodeEntry>)
     : ArrayAdapter<AreaCodeEntry>(context, 0, entries)
 {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.spinner_item, parent, false)
+        val inflater = LayoutInflater.from(context)
+        val view = convertView ?: inflater.inflate(R.layout.spinner_item, parent, false)
         val entry = getItem(position)!!
 
         val primary = view.findViewById(android.R.id.text1) as TextView

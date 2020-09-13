@@ -23,7 +23,7 @@ class FilterRuleAdapter(private val context: Context) : BaseAdapter() {
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val inflater = context.getSystemService(LayoutInflater::class.java)!!
+        val inflater = LayoutInflater.from(context)
         val view = convertView ?: inflater.inflate(android.R.layout.simple_list_item_1, parent, false)
         val textView = view.findViewById<TextView>(android.R.id.text1)
         textView.text = getItem(position)
